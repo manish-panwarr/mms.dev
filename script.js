@@ -42,19 +42,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    if (document.querySelector(".typing-text")) {
-        new Typed(".typing-text", {
-            strings: [
-                "Welcome to My World",
-                "A Full-Stack Developer's Journey",
-                "Code That Works. Systems That Think."
-            ],
-            typeSpeed: 70,
-            backSpeed: 40,
-            loop: true,
-            showCursor: false
-        });
-    }
+if (document.querySelector(".typing-text")) {
+    new Typed(".typing-text", {
+        strings: [
+            "Full-Stack Web Developer",
+            "AI/ML Engineer",
+            "Digital Growth Strategist"
+        ],
+        typeSpeed: 70,
+        backSpeed: 40,
+        loop: true,
+        showCursor: false
+    });
+}}
 
 
     const scrollObserver = new IntersectionObserver(
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const accessKey = formData.get("access_key");
 
             if (!accessKey) {
-                result.innerHTML = "Please add your Access Key in the HTML file first.";
+                result.innerHTML = "not-working ! Please use emial mentioned above !";
                 result.style.display = "block";
                 result.className = "error";
                 setTimeout(() => (result.style.display = "none"), 5000);
@@ -253,7 +253,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { title: "coursera-GEN-AI", src: "images/coursera2.png" },
         { title: "tcs-cybersecurity-IAM", src: "images/tcs-cybersecurity-IAM.png" },
         { title: "forage-tata", src: "images/tata-forage.png" },
-        { title: "Udemy-MERN", src: "images/udemy-MERN.png" }
+        { title: "Udemy-MERN", src: "images/udemy-MERN.png" },
+        { title: "DevOps-Coursera", src:"images/DevOps.png"}
     ];
 
     const mainview = document.querySelector(".main-view img");
@@ -371,3 +372,4 @@ document.addEventListener("DOMContentLoaded", () => {
         progressBars.forEach(bar => skillObserver.observe(bar));
     }
 });
+
