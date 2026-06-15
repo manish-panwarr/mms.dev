@@ -1,0 +1,195 @@
+/*
+   INTERACTIVE FUTURISTIC UI LAYER
+*/
+
+/* 1. 3D PARTICLE BACKGROUND CANVAS */
+#three-background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  pointer-events: none;
+  background-color: #050508;
+}
+
+/* Sections transparent only when particle background is active (class set by interactive-background.js) */
+.particle-bg-active section {
+  background: transparent;
+}
+
+/* Subtle cyber-grid overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.015) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -9;
+  pointer-events: none;
+}
+
+/* 
+   2. GLASSMORPHISM CARDS
+   Elevated specificity with body prefix avoids !important overuse
+*/
+
+body .card,
+body .project-card,
+body .contact-form-container,
+body .contact-bottom-card {
+  background: rgba(16, 16, 23, 0.7);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+body .card:hover,
+body .project-card:hover {
+  border-color: rgba(56, 189, 248, 0.25);
+  box-shadow: 0 12px 40px rgba(56, 189, 248, 0.15);
+}
+
+/* Header */
+body .header {
+  background: rgba(16, 16, 23, 0.5);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* PERF: Reduce blur cost on mobile — backdrop-filter is GPU-expensive */
+@media (max-width: 768px) {
+
+  body .card,
+  body .project-card {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+}
+
+/* 
+   3. CUSTOM CURSOR
+*/
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  mix-blend-mode: difference;
+  transform: translate3d(-100px, -100px, 0);
+  will-change: transform, opacity;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  mix-blend-mode: difference;
+  transform: translate3d(-100px, -100px, 0);
+  will-change: transform, opacity;
+  transition:
+    background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-cursor-ring.cursor-hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0);
+}
+
+/* Hide native cursor only on true pointer devices */
+@media (hover: hover) and (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+
+/*
+   4. MAGNETIC BUTTON HELPER
+*/
+
+.magnetic-btn {
+  display: inline-block;
+  will-change: transform;
+}
+
+/*
+   5. GSAP FOUC PREVENTION
+   js-enabled class is set in animations.js before any tween runs
+*/
+
+.js-enabled .reveal-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Disable CSS transitions on GSAP-controlled elements to prevent stuttering */
+.gsap-active .card-animate,
+.gsap-active .animate-on-scroll {
+  transition: none;
+}
+
+/* 
+   6. REDUCED MOTION
+   Immediately disable all decorative animations for vestibular accessibility
+*/
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Hide particle canvas and grid overlay — purely decorative */
+  #three-background-canvas,
+  body::before {
+    display: none;
+  }
+
+  /* Ensure all animated elements are immediately visible */
+  .card-animate,
+  .animate-on-scroll,
+  .section-title,
+  .service-card,
+  .project-card,
+  .animate-cert-main,
+  .certificate-card,
+  .dashboard-footer {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  /* Hide custom cursor elements — motion-free users don't need them */
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none;
+  }
+}

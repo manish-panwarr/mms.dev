@@ -1,684 +1,863 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohan's Creative Portfolio</title>
-    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manish Mohan Singh — Full Stack Engineer</title>
+  <meta name="description"
+    content="Manish Mohan Singh is a Full Stack Engineer building performant MERN and AI-enabled web experiences. Explore portfolio projects, certifications, and contact details." />
+  <meta name="theme-color" content="#0a0a0f" />
+  <link rel="canonical" href="https://mms.dev/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Manish Mohan Singh — Full Stack Engineer" />
+  <meta property="og:description"
+    content="Building performant MERN and AI-enabled web experiences. View projects, certifications, and contact for collaboration." />
+  <meta property="og:url" content="https://mms.dev/" />
+  <meta property="og:image" content="https://mms.dev/assets/images/profilepic.jpeg" />
+  <meta property="og:site_name" content="mms.dev" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Manish Mohan Singh — Full Stack Engineer" />
+  <meta name="twitter:description"
+    content="Building performant MERN and AI-enabled web experiences. View projects, certifications, and contact for collaboration." />
+  <meta name="twitter:image" content="https://mms.dev/assets/images/profilepic.jpeg" />
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Manish Mohan Singh",
+        "url": "https://mms.dev/",
+        "sameAs": [
+          "https://www.linkedin.com/in/manish-mohan-singh-aab371374/",
+          "https://github.com/manish-panwarr",
+          "https://leetcode.com/u/g7pE7qxNks/"
+        ],
+        "jobTitle": "Full Stack Engineer",
+        "description": "Building performant MERN and AI-enabled web applications.",
+        "knowsAbout": [
+          "JavaScript",
+          "React",
+          "Node.js",
+          "MongoDB",
+          "Python",
+          "AI",
+          "DevOps"
+        ]
+      }
+    </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono&family=Sacramento&family=Schoolbell&display=swap"
-        rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/dashboard.css" />
+  <link rel="stylesheet" href="assets/css/interactive-ui.css" />
+  <link rel="stylesheet" href="assets/css/projects.css" />
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 </head>
 
 <body>
+  <header class="header">
+    <a href="#home" class="logo-link"><i class="fa-solid fa-code fa-bounce"></i>
+      <h3>mms<span>.dev</span></h3>
+    </a>
+    <nav class="navbar" id="navbar" role="navigation">
+      <a href="#home" class="active">Home</a>
+      <a href="#projects">Portfolio</a>
+      <a href="#certificate">Certificates</a>
+      <a href="#about">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
+    <button class="menu-icon" id="menu-icon" type="button" aria-expanded="false" aria-controls="navbar"
+      aria-label="Toggle navigation">
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+      </div>
+    </button>
+  </header>
 
-    <header class="header">
-        <a href="#home" class="logo-link"><img id="logo" src="images/mcreation.png" alt="My_logo" /></a>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Portfolio</a>
-            <a href="#certificate">Certificates</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact </i></a>
-        </nav>
-
-        <div class="menu-icon" id="menu-icon" style="padding-right: 15px">
-            <i class="fa-solid fa-bars"></i>
+  <main>
+    <section class="home-dashboard" id="home">
+      <div class="dashboard-grid">
+        <!-- 1. NAME CARD -->
+        <div class="card name-card card-animate" id="card-name">
+          <div class="badge">
+            <span class="dot"></span> Available for Work
+          </div>
+          <h1>Manish Mohan Singh.</h1>
+          <p class="role">
+            Full Stack Engineer<br />Building performant web applications and
+            AI-enabled user experiences.
+          </p>
         </div>
-    </header>
 
-    <main>
+        <!-- 3. SOCIAL CARD -->
+        <div class="card social-card card-animate" id="card-social">
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/manish-mohan-singh-aab371374/" target="_blank"
+              rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/manish-panwarr" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                class="fa-brands fa-github"></i></a>
+            <a href="mailto:panwarmanish0123@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:9027811529" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+          </div>
+          <div class="social-cta">
+            <a href="#projects" class="btn-primary-dash"><i class="fa-solid fa-code"></i> Projects</a>
+            <a href="./assets/images/myresume.pdf" class="btn-outline-dash"><i class="fa-solid fa-file"></i>&nbsp;Resume</a>
+          </div>
+        </div>
 
-        <section class="home" id="home">
-            <div class="home-content">
-                <div class="circle">
-                    <div class="innerimg">
-                        <img src="images/profilepic.jpeg" alt="Profile Picture of Manish">
-                    </div>
-                </div>
-                <h3><span class="typing-text" style="font-family: Schoolbell, cursive;"></span></h3>
-                <p>
-                    Hi, I'm <span id="name"
-                        style="font-size: 34px; color: var(--main-color); padding-left: 6px; font-family: Sacramento, cursive;">Manish
-                    </span>— Full Stack Developer <br>
+        <!-- 2. PROFILE IMAGE CARD -->
+        <div class="card profile-card card-animate" id="card-profile">
+          <div class="profile-img-wrapper">
+            <img src="assets/images/profilepic.jpeg" alt="Manish Singh — Full Stack Developer" />
+          </div>
+          <div class="profile-role">
+            <span>Full Stack Engineer</span>
+            <!-- <p>Building scalable AI-powered apps.</p> -->
+          </div>
+        </div>
 
-                    From user experience to data handling, I engineer intelligent systems with purpose.
-                    <br>Logic is my canvas, AI is my brush 🖌️.
-                </p>
-                <div class="btn-group">
-                    <a href="#projects" class="btn">View My Work</a>
-                    <a href="https://t.me/manimms" class="btn btn-secondary" target="_blank">Have some projects for you
-                        !</a>
-                </div>
+        <!-- 4. ABOUT CARD -->
+        <div class="card about-card-dash card-animate" id="card-about">
+          <span class="card-arrow">↗</span>
+          <div class="card-label">About</div>
+          <ul>
+            <li>Develops modern, efficient web solutions.</li>
+            <li>Adapts quickly to new tools.</li>
+            <li>Works well in team environments.</li>
+          </ul>
+          <div class="about-footer">
+            Turning &nbsp;<i class="fa-regular fa-lightbulb"></i> ideas into
+            working products.
+          </div>
+        </div>
+
+        <!-- 5. EXPERIENCE CARD -->
+        <div class="card experience-card card-animate" id="card-experience">
+          <span class="card-arrow">↗</span>
+          <div class="card-label">Experience</div>
+          <div class="exp-status">
+            <span class="status-dot"></span>
+            <span>Freelance &amp; Full-time</span>
+          </div>
+          <div class="exp-details">
+            <h4>Full Stack Developer</h4>
+            <p>MERN + AI Projects</p>
+          </div>
+          <span class="status-label">Seeking New Roles</span>
+        </div>
+
+        <!-- 6. STACK CARD -->
+        <div class="card stack-card card-animate" id="card-stack">
+          <span class="card-arrow">↗</span>
+          <div class="card-label">Stack</div>
+          <div class="stack-pills">
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span>TypeScript</span>
+            <span><i class="fa-brands fa-react"></i> React</span>
+            <span><i class="fa-brands fa-node-js"></i> Node.js</span>
+            <span>MongoDB</span>
+            <span><i class="fa-brands fa-java"></i> Java</span>
+            <span>Tailwind</span>
+            <span><i class="fa-brands fa-python"></i> Python</span>
+            <span><i class="fa-brands fa-c"></i></span>
+            <span><i class="fa-brands fa-github"></i> Git & GitHub</span>
+            <span><i class="fa-brands fa-linux"></i> Linux</span>
+            <span><i class="fa-brands fa-docker"></i> Docker</span>
+          </div>
+        </div>
+
+        <!-- 7. EDUCATION CARD -->
+        <div class="card education-card card-animate" id="card-education">
+          <span class="card-arrow">↗</span>
+          <div class="card-label">Education</div>
+          <div class="edu-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="edu-details">
+            <h4>Master of Computer Applications</h4>
+            <p>Specializing in AI &amp; ML</p>
+          </div>
+          <div class="edu-institution">
+            <i class="fa-solid fa-building-columns"></i>
+            <span>Manipal University</span>
+          </div>
+        </div>
+
+        <!-- 8. FEATURED PROJECTS CARD -->
+        <div class="card featured-card card-animate" id="card-featured">
+          <span class="card-arrow">↗</span>
+          <div class="card-label">Featured Projects</div>
+          <div class="featured-icon">
+            <i class="fa-solid fa-folder-open"></i>
+          </div>
+          <h4>Featured Projects</h4>
+          <a href="#projects" class="featured-link">
+            <i class="fa-solid fa-eye"></i> View Portfolio
+          </a>
+          <div class="featured-project-dots">
+            <span class="highlight-dot"><i class="fa-solid fa-code"></i></span>
+            <span class="highlight-dot"><i class="fa-solid fa-robot"></i></span>
+            <span class="highlight-dot"><i class="fa-solid fa-shield"></i></span>
+            <span>+1</span>
+          </div>
+        </div>
+
+        <!-- 9. LEETCODE ACTIVITY CARD -->
+        <div class="card leetcode-card card-animate" id="card-leetcode">
+          <div class="card-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA116" style="flex-shrink: 0">
+              <path
+                d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+            </svg>
+            LeetCode Activity
+          </div>
+
+          <!-- Stats Row -->
+          <div class="lc-stats-row">
+            <div class="lc-stat">
+              <span class="lc-stat-num" id="lc-solved">—</span>
+              <span class="lc-stat-label">Solved</span>
             </div>
-            <div class="home-social">
-                <a href="https://www.linkedin.com/in/manish-mohan-singh-aab371374/" target="_blank"><i
-                        class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/manish-panwarr" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:panwarmanish0123@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                <a href="tel:9027811529"><i class="fa-solid fa-phone"></i></a>
+            <div class="lc-stat-divider"></div>
+            <div class="lc-stat">
+              <span class="lc-stat-num lc-easy" id="lc-easy">—</span>
+              <span class="lc-stat-label">Easy</span>
             </div>
-            <div class="scroll-down">
-                <a href="#services"><i class="fa-solid fa-arrow-down"></i> Scroll Down</a>
+            <div class="lc-stat">
+              <span class="lc-stat-num lc-medium" id="lc-medium">—</span>
+              <span class="lc-stat-label">Medium</span>
             </div>
-        </section>
-
-
-        <section class="services mobile" id="services">
-            <h2 class="section-title animate-on-scroll">Things I Love to <span>Do</span></h2>
-            <div class="services-container">
-                <div class="service-card animate-on-scroll"><i class="fa-solid fa-code fa-bounce"></i>
-                    <h3>Web Development</h3>
-                    <p>Creating responsive and dynamic websites from the ground up using modern technologies like HTML,
-                        CSS, and JavaScript.</p>
-                </div>
-                <div class="service-card animate-on-scroll"><i class="fa-solid fa-robot fa"></i>
-                    <h3>AI Integration</h3>
-                    <p>Automate tasks and track progress in real time.
-                        Get instant alerts, smart recommendations, and smart insights for faster decisions. 🚀.</p>
-                </div>
-                <div class="service-card animate-on-scroll"><i class="fa-solid fa-rocket"></i>
-                    <h3>Social Media Marketing</h3>
-                    <p>We help you to grow your business on social media platforms.</p>
-                </div>
-                <div class="service-card animate-on-scroll more"><i class="fa-solid fa-infinity"></i>
-                    <h3>DevOps & CI/CD</h3>
-                    <p>Implement infrastructure-as-code, automated testing, containerization (Docker), and CI/CD
-                        pipelines using GitHub Actions.</p>
-                </div>
-                <div class="service-card animate-on-scroll more"><i class="fa-solid fa-brain"></i>
-                    <h3>AI & ML Solutions</h3>
-                    <p>Design intelligent systems using Python, TensorFlow, and Scikit-learn. From predictive modeling
-                        to NLP applications.</p>
-                </div>
-                <div class="service-card animate-on-scroll more"><i class="fa-solid fa-shield-halved"></i>
-                    <h3>Security Implementation</h3>
-                    <p>Ensure robust application security with best practices in authentication, encryption, code
-                        audits, and DevSecOps.</p>
-                </div>
+            <div class="lc-stat">
+              <span class="lc-stat-num lc-hard" id="lc-hard">—</span>
+              <span class="lc-stat-label">Hard</span>
             </div>
-        </section>
-
-
-        <section class="projects mobile" id="projects">
-            <h2 class="section-title animate-on-scroll">Here’s What I <span> Build</span></h2>
-
-            <div class="project-filter animate-on-scroll">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="mern">MERN</button>
-                <button class="filter-btn" data-filter="ai">AI / ML</button>
-                <button class="filter-btn" data-filter="security">Security</button>
+            <div class="lc-stat-divider"></div>
+            <div class="lc-stat">
+              <span class="lc-stat-num lc-active" id="lc-active-days">—</span>
+              <span class="lc-stat-label">Active Days</span>
             </div>
+          </div>
 
-            <div class="project-grid">
-                <!-- Project 1: Chat App -->
-                <div class="project-card animate-on-scroll" data-category="ai">
-                    <div class="project-media">
-                        <img src="images/ai-chat-app.png" alt="AI Chat App" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://github.com/manish-panwarr" target="_blank" title="Source Code"><i
-                                    class="fa-brands fa-github"></i></a>
-                            <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>AI Chat App</h3>
-                        <p>Real-time chat application powered by AI.</p>
-                        <div class="project-tags">
-                            <span>React</span><span>Node</span><span>AI</span>
-                        </div>
-                    </div>
-                </div>
+          <!-- Heatmap grid: JS renders per-month blocks here -->
+          <div class="lc-graph" id="lc-graph"></div>
 
-                <!-- Project 2: Task Manager -->
-                <div class="project-card animate-on-scroll" data-category="mern">
-                    <div class="project-media">
-                        <img src="images/procastinot.png" alt="Task Manager" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://github.com/manish-panwarr" target="_blank" title="Source Code"><i
-                                    class="fa-brands fa-github"></i></a>
-                            <a href="https://task-manager-seven-swart-84.vercel.app/login" target="_blank"
-                                title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Task-Manager</h3>
-                        <p>Stay organized with this robust task management tool.</p>
-                        <div class="project-tags">
-                            <span>React</span><span>MongoDB</span><span>Express</span>
-                        </div>
-                    </div>
-                </div>
+          <!-- Legend -->
+          <div class="lc-legend">
+            <span>Less</span>
+            <div class="lc-cell-legend" style="
+                  background: #2d2d2d;
+                  border: 1px solid rgba(255, 255, 255, 0.1);
+                "></div>
+            <div class="lc-cell-legend" style="background: #0e4429"></div>
+            <div class="lc-cell-legend" style="background: #006d32"></div>
+            <div class="lc-cell-legend" style="background: #26a641"></div>
+            <div class="lc-cell-legend" style="background: #39d353"></div>
+            <span>More</span>
+          </div>
 
-                <!-- Project 3: Phishing Detection -->
-                <div class="project-card animate-on-scroll" data-category="security">
-                    <div class="project-media">
-                        <img src="images/phising-site.png" alt="Phishing Detection" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://github.com/manish-panwarr/phising-site-detection-browser-extension"
-                                target="_blank" title="Source Code"><i class="fa-brands fa-github"></i></a>
-                            <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Phishing Detection</h3>
-                        <p>Browser extension to detect malicious websites.</p>
-                        <div class="project-tags">
-                            <span>JS</span><span>HTML</span><span>Security</span>
-                        </div>
-                    </div>
-                </div>
+          <div class="lc-handle">
+            <a href="https://leetcode.com/u/g7pE7qxNks/" target="_blank" rel="noopener noreferrer">@manish-panwarr</a>
+          </div>
+        </div>
 
-                <!-- Project 4: LMS -->
-                <div class="project-card animate-on-scroll" data-category="mern">
-                    <div class="project-media">
-                        <img src="images/coming-soon.png" alt="LMS" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://github.com/manish-panwarr" target="_blank" title="Source Code"><i
-                                    class="fa-brands fa-github"></i></a>
-                            <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>RentEase</h3>
-                        <p>Verified rooms, zero hassle, all online.</p>
-                        <div class="project-tags">
-                            <span>MERN</span><span>Redux</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- 10. LOCATION CARD -->
+        <div class="card location-card-dash card-animate" id="card-location">
+          <img src="assets/images/india.svg" alt="india" id="ind-map" />
+          <div class="card-label">Based In</div>
+          <div class="location-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h4>India</h4>
+          <div class="location-time" id="live-time">--:-- IST</div>
+          <div class="location-remote">Available Remote</div>
+        </div>
+      </div>
 
-                <!-- Project 5: Movie Rec -->
-                <div class="project-card animate-on-scroll" data-category="ai">
-                    <div class="project-media">
-                        <img src="images/coming-soon.png" alt="Movie Rec" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://github.com/manish-panwarr" target="_blank" title="Source Code"><i
-                                    class="fa-brands fa-github"></i></a>
-                            <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Movie Recommender</h3>
-                        <p>Designed to recommend movies based on user preferences.</p>
-                        <div class="project-tags">
-                            <span>Python</span><span>ML</span>
-                        </div>
-                    </div>
-                </div>
+      <!-- Dashboard Footer -->
+      <div class="dashboard-footer">
+        <span><i class="fa-solid fa-code"></i> mms.dev</span>
+        <span>Full Stack Developer</span>
+      </div>
+    </section>
 
-                <!-- Project 6: Coming Soon -->
-                <div class="project-card animate-on-scroll" data-category="mern">
-                    <div class="project-media">
-                        <img src="images/coming-soon.png" alt="Phishing Detection" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="#" target="_blank" title="Source Code"><i class="fa-brands fa-github"></i></a>
-                            <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Learning Management System (LMS)</h3>
-                        <p>Designed to streamline the educational process for both students and teachers.</p>
-                        <div class="project-tags">
-                            <span>MERN</span><span>Redux</span><span>Roll Based</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- More Projects -->
-                <div class="project-card animate-on-scroll more-projects" data-category="all">
-                    <div class="project-media">
-                        <div class="project-overlay">
-                            <span>Coming Soon</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>More Projects</h3>
-                        <p>Exciting new projects are in the pipeline!</p>
-                        <div class="project-tags">
-                            <a href="https://github.com/manish-panwarr" target="_blank" title="Source Code"><i
-                                    class="fa-brands fa-github"></i></a>
-                        </div>
-                    </div>
+
+    <!-- Project Section -->
+    <section class="projects-section-redesign" id="projects">
+      <h2 class="section-title animate-on-scroll">
+        Here's What I <span>Build</span>
+      </h2>
+
+      <!-- Search & Filter Controls -->
+      <div class="projects-controls animate-on-scroll">
+        <div class="project-filter-tabs" id="project-filter-tabs">
+          <button class="filter-tab-btn active" data-filter="All">All</button>
+          <button class="filter-tab-btn" data-filter="MERN">MERN</button>
+          <button class="filter-tab-btn" data-filter="AI / ML">AI / ML</button>
+          <button class="filter-tab-btn" data-filter="Security">Security</button>
+        </div>
+        <div class="project-search-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="project-search-input" placeholder="Search by tech or name..." aria-label="Search projects" autocomplete="off" />
+          <button id="project-search-clear-btn" class="search-clear-btn" aria-label="Clear search" style="display: none;"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+
+      <div class="bento-grid" id="projects-grid">
+        <!-- Dynamically populated in script.js -->
+      </div>
+    </section>
+
+    <!-- All Certificates -->
+
+    <section class="certificate mobile" id="certificate">
+      <h2 class="section-title animate-on-scroll certificate-title">
+        Certifica<span>tes</span>
+      </h2>
+
+      <div class="certificate-container animate-on-scroll">
+        <!-- Thumbnails Grid (Left Side on Desktop) -->
+        <div class="certificates-wrapper">
+          <div class="certificates-small animate-cert-thumbs" id="cert-thumbnails-grid">
+            <!-- Dynamically populated in script.js -->
+          </div>
+        </div>
+
+        <!-- Main certificate (Right Side on Desktop) - Show Normally, Flat -->
+        <div class="main-view animate-cert-main">
+          <img src="assets/images/coursera-aws.png" alt="AWS Cloud Technical Essentials" id="main-cert-image"
+            loading="lazy" />
+
+          <!-- Floating Verification Badge (Bottom-Left corner overlay for right-side preview layout) -->
+          <div class="floating-cert-badge" id="floating-badge">
+            <div class="badge-icon-wrapper">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="badge-details">
+              <span class="badge-title" id="badge-authority">Verified by AWS via Coursera</span>
+              <span class="badge-id" id="badge-id">ID: AMZ-993-X42</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Timeline Section -->
+    <section class="about mobile" id="about">
+      <h2 class="section-title animate-on-scroll">
+        My Education <span>Timeline</span>
+      </h2>
+
+      <div class="timeline-window animate-on-scroll">
+        <div class="timeline-horizontal-wrapper">
+          <div class="timeline-track-line"></div>
+          
+          <div class="timeline-horizontal-container">
+            <!-- 1. 2019-2020: Higher School -->
+            <div class="timeline-horiz-item type-top">
+              <div class="timeline-horiz-card">
+                <span class="timeline-badge">2019 - 2020</span>
+                <h3>Higher School</h3>
+                <div class="timeline-institution">
+                  <i class="fa-solid fa-school"></i>
+                  <span>High School Education</span>
                 </div>
+                <div class="timeline-grade">Score: 88%</div>
+                <p class="timeline-details">Completed higher school studies with a focus on core academic excellence and foundations.</p>
+              </div>
+              <div class="timeline-connector"></div>
+              <div class="timeline-horiz-dot"></div>
             </div>
 
-            <button class="load-more-btn animate-on-scroll">Show More</button>
-        </section>
-
-
-        <section class="testimonials mobile" id="testimonials">
-            <h2 class="section-title animate-on-scroll">What Our Users <span>Say</span></h2>
-            <p class="section-subtitle animate-on-scroll"> <i class="fa-solid fa-triangle-exclamation"></i> Dummy
-                Clients</p>
-
-            <div class="testimonial-container animate-on-scroll">
-                <div class="testimonial-track">
-                    <!-- Set of Cards -->
-                    <div class="testimonial-card">
-                        <div class="card-header">
-                            <img src="images/vipin.png" alt="User Avatar" class="user-avatar" loading="lazy">
-                            <div class="user-info">
-                                <h3>Vipin Singh</h3>
-                                <span class="user-email">vipin@xyz.com</span>
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="feedback">"We loved working with Manish. He is a great developer and always goes above
-                            and beyond to deliver high-quality work."</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="card-header">
-                            <img src="images/Ashish-panwar.png" alt="User Avatar" class="user-avatar" loading="lazy">
-                            <div class="user-info">
-                                <h3>Ashish Panwar</h3>
-                                <span class="user-email">ashish@xyz.com</span>
-                                <span class="user-role">Developer</span>
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star-half-stroke"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="feedback">"They are true professionals. They delivered on time and exceeded our
-                            expectations. Highly recommend for any project."</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="card-header">
-                            <img src="images/Priya.png" alt="User Avatar" class="user-avatar" loading="lazy">
-                            <div class="user-info">
-                                <h3>Aushi Rawat</h3>
-                                <span class="user-email">aushirawat@xyz.com</span>
-                                <span class="user-role">Social Media Influencer</span>
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="feedback">"We work together on social media marketing and they are very helpful and
-                            professional. Their pricing was also very reasonable."</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="card-header">
-                            <img src="images/Jayandra.png" alt="User Avatar" class="user-avatar" loading="lazy">
-                            <div class="user-info">
-                                <h3>Jayandra Singh</h3>
-                                <span class="user-email">jayandra@xyz.com</span>
-                                <span class="user-role">Berojgar</span>
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="feedback">"I work with Manish for a long time and he is a great developer and always
-                            goes above and beyond to deliver high-quality work."</p>
-                    </div>
-
-
-
-
-                    <!-- Duplicate Set for Infinite Scroll Effect -->
-                    <div class="testimonial-card">
-                        <div class="card-header">
-                            <img src="images/vipin.png" alt="User Avatar" class="user-avatar" loading="lazy">
-                            <div class="user-info">
-                                <h3>Vipin Singh</h3>
-                                <span class="user-email">vipin@xyz.com</span>
-                                <span class="user-role">Friend</span>
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="feedback">"We loved working with Manish. He is a great developer and always goes above
-                            and beyond to deliver high-quality work."</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="card-header">
-                            <img src="images/Ashish-panwar.png" alt="User Avatar" class="user-avatar" loading="lazy">
-                            <div class="user-info">
-                                <h3>Ashish Panwar</h3>
-                                <span class="user-email">ashish@xyz.com</span>
-                                <span class="user-role">Developer</span>
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star-half-stroke"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="feedback">"They are true professionals. They delivered on time and exceeded our
-                            expectations. Highly recommend for any project."</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="card-header">
-                            <img src="images/Priya.png" alt="User Avatar" class="user-avatar" loading="lazy">
-                            <div class="user-info">
-                                <h3>Agle Priya</h3>
-                                <span class="user-email">priya@xyz.com</span>
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="feedback">"I was impressed by their attention to detail and their ability to deliver
-                            high-quality work. They exceeded my expectations and I would highly recommend them for any
-                            project."</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="card-header">
-                            <img src="images/Jayandra.png" alt="User Avatar" class="user-avatar" loading="lazy">
-                            <div class="user-info">
-                                <h3>Jayandra Singh</h3>
-                                <span class="user-email">jayandra@xyz.com</span>
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="feedback">"We worked together on a project and they were very helpful and
-                            professional. Their pricing was also very reasonable."</p>
-                    </div>
+            <!-- 2. 2021-2022: Secondary High School -->
+            <div class="timeline-horiz-item type-bottom">
+              <div class="timeline-horiz-dot"></div>
+              <div class="timeline-connector"></div>
+              <div class="timeline-horiz-card">
+                <span class="timeline-badge">2021 - 2022</span>
+                <h3>Secondary High School</h3>
+                <div class="timeline-institution">
+                  <i class="fa-solid fa-school-flag"></i>
+                  <span>Senior Secondary School</span>
                 </div>
+                <div class="timeline-grade">Score: 83%</div>
+                <p class="timeline-details">Completed secondary high school specializing in science and mathematical streams.</p>
+              </div>
             </div>
-        </section>
 
+            <!-- 3. 2022-2025: Graduation (BCA) -->
+            <div class="timeline-horiz-item type-top wide">
+              <div class="timeline-horiz-card">
+                <span class="timeline-badge">2022 - 2025</span>
+                <h3>Graduation (BCA)</h3>
+                <div class="timeline-institution">
+                  <i class="fa-solid fa-building-columns"></i>
+                  <span>Graphic Era University (GEU)</span>
+                </div>
+                <div class="timeline-grade">CGPA: 8.6</div>
+                <div class="timeline-details">
+                  <p>Core learnings include:</p>
+                  <div class="timeline-skills-list">
+                    <span class="timeline-skill-pill">Fundamentals of Computer</span>
+                    <span class="timeline-skill-pill">Fundamentals of DSA</span>
+                    <span class="timeline-skill-pill">OS</span>
+                    <span class="timeline-skill-pill">Networking</span>
+                    <span class="timeline-skill-pill">AI/ML</span>
+                    <span class="timeline-skill-pill">Development</span>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-connector"></div>
+              <div class="timeline-horiz-dot"></div>
+            </div>
 
+            <!-- 4. 2025-2027: Masters (MCA) -->
+            <div class="timeline-horiz-item type-bottom wide">
+              <div class="timeline-horiz-dot"></div>
+              <div class="timeline-connector"></div>
+              <div class="timeline-horiz-card">
+                <span class="timeline-badge">2025 - 2027</span>
+                <h3>Masters (MCA)</h3>
+                <div class="timeline-institution">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>Manipal University Jaipur (MUJ)</span>
+                </div>
+                <div class="timeline-grade">Masters Degree</div>
+                <div class="timeline-details">
+                  <p>Focused areas:</p>
+                  <div class="timeline-skills-list">
+                    <span class="timeline-skill-pill">MERN Stack</span>
+                    <span class="timeline-skill-pill">Cloud</span>
+                    <span class="timeline-skill-pill">AI/ML</span>
+                    <span class="timeline-skill-pill">DevOps</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <section class="certificate mobile" id="certificate">
-            <h2 class="section-title animate-on-scroll certificate-title">
-                Certificates<span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS DASHBOARD SECTION -->
+    <section class="skills-dashboard" id="skills">
+      <div class="skills-header">
+        <h2>Skills &amp; Technol<span>ogies</span></h2>
+        <p>
+          Tools, languages, and platforms I use to build real-world
+          applications.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- CATEGORY: Programming Lang -->
+        <div class="card skill-cat-card card-animate" id="skill-programming">
+          <div class="cat-header">
+            <span class="cat-emoji"><i class="fa-solid fa-code"></i></span>
+            <h4>Programming</h4>
+          </div>
+          <div class="cat-pills">
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span><i class="fa-brands fa-typescript"></i> TypeScript</span>
+            <span><i class="fa-brands fa-python"></i> Python</span>
+            <span><i class="fa-brands fa-java"></i> Java</span>
+            <span> C</span>
+          </div>
+        </div>
+
+        <!-- CATEGORY: Web Development -->
+        <div class="card skill-cat-card card-animate" id="skill-web">
+          <div class="cat-header">
+            <span class="cat-emoji"><i class="fa-solid fa-globe"></i></span>
+            <h4>Web Development</h4>
+          </div>
+          <div class="cat-pills">
+            <span><i class="fa-brands fa-html5"></i> HTML</span>
+            <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span><i class="fa-solid fa-database"></i> MERN Stack</span>
+          </div>
+        </div>
+
+        <!-- CATEGORY: DevOps & Cloud -->
+        <div class="card skill-cat-card card-animate" id="skill-devops">
+          <div class="cat-header">
+            <span class="cat-emoji"><i class="fa-solid fa-cloud"></i></span>
+            <h4>DevOps &amp; Cloud</h4>
+          </div>
+          <div class="cat-pills">
+            <span><i class="fa-brands fa-docker"></i> Docker</span>
+            <span><i class="fa-brands fa-kubernetes"></i> Kubernetes</span>
+            <span><i class="fa-brands fa-aws"></i> AWS</span>
+            <span><i class="fa-brands fa-linux"></i> Linux</span>
+          </div>
+        </div>
+
+        <!-- CATEGORY: Tools -->
+        <div class="card skill-cat-card card-animate" id="skill-tools">
+          <div class="cat-header">
+            <span class="cat-emoji">🛠</span>
+            <h4>Tools</h4>
+          </div>
+          <div class="cat-pills">
+            <span><i class="fa-brands fa-github"></i> GitHub</span>
+            <span><i class="fa-solid fa-cloud"></i> Postman</span>
+            <span><i class="fa-solid fa-code"></i> VS Code</span>
+            <span><i class="fa-solid fa-database"></i> MongoDB Atlas</span>
+            <span><i class="fa-brands fa-docker"></i> Docker</span>
+            <span><i class="fa-brands fa-kubernetes"></i> Kubernetes</span>
+          </div>
+        </div>
+
+        <!-- SKILL PROFICIENCY -->
+        <div class="card proficiency-card card-animate" id="skill-proficiency">
+          <div class="card-label">
+            <span class="emoji"></span> Skill Proficiency
+          </div>
+          <div class="proficiency-grid">
+            <div class="proficiency-item">
+              <div class="prof-header">
+                <span><span class="lang-icon"><i class="fa-brands fa-js"></i></span>
+                  JavaScript</span>
+                <span class="level">Advanced</span>
+              </div>
+              <div class="prof-bar">
+                <div class="prof-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="proficiency-item">
+              <div class="prof-header">
+                <span><span class="lang-icon"><i class="fa-brands fa-python"></i></span>
+                  Python</span>
+                <span class="level">Intermediate</span>
+              </div>
+              <div class="prof-bar">
+                <div class="prof-bar-fill" data-width="50"></div>
+              </div>
+            </div>
+            <div class="proficiency-item">
+              <div class="prof-header">
+                <span><span class="lang-icon"><i class="fa-brands fa-java"></i></span>
+                  Java</span>
+                <span class="level">Intermediate</span>
+              </div>
+              <div class="prof-bar">
+                <div class="prof-bar-fill" data-width="60"></div>
+              </div>
+            </div>
+            <div class="proficiency-item">
+              <div class="prof-header">
+                <span><span class="lang-icon"><i class="fa-solid fa-c"></i></span></span>
+                <span class="level">Intermediate</span>
+              </div>
+              <div class="prof-bar">
+                <div class="prof-bar-fill" data-width="65"></div>
+              </div>
+            </div>
+            <div class="proficiency-item">
+              <div class="prof-header">
+                <span><span class="lang-icon"><i class="fa-brands fa-css3-alt"></i></span>
+                  CSS</span>
+                <span class="level">Advanced</span>
+              </div>
+              <div class="prof-bar">
+                <div class="prof-bar-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="proficiency-item">
+              <div class="prof-header">
+                <span><span class="lang-icon"><i class="fa-brands fa-docker"></i></span>
+                  Docker</span>
+                <span class="level">Basic</span>
+              </div>
+              <div class="prof-bar">
+                <div class="prof-bar-fill" data-width="35"></div>
+              </div>
+            </div>
+            <div class="proficiency-item">
+              <div class="prof-header">
+                <span><span class="lang-icon"><i class="fa-brands fa-kubernetes"></i></span>
+                  Kubernetes</span>
+                <span class="level">Basic</span>
+              </div>
+              <div class="prof-bar">
+                <div class="prof-bar-fill" data-width="25"></div>
+              </div>
+            </div>
+            <div class="proficiency-item">
+              <div class="prof-header">
+                <span><span class="lang-icon"><i class="fa-brands fa-linux"></i></span>
+                  Linux</span>
+                <span class="level">Basic</span>
+              </div>
+              <div class="prof-bar">
+                <div class="prof-bar-fill" data-width="40"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXPERIENCE STRIP -->
+        <div class="card exp-strip card-animate" id="skill-exp-strip">
+          <div class="card-label">Experience</div>
+          <div class="exp-item">
+            JavaScript <span class="exp-duration">— 2+ years</span>
+          </div>
+          <div class="exp-item">
+            Python <span class="exp-duration">— 4 months</span>
+          </div>
+          <div class="exp-item">
+            Java (DSA) <span class="exp-duration">— 3 months</span>
+          </div>
+          <div class="exp-item">
+            MERN Stack <span class="exp-duration">— 1 years</span>
+          </div>
+          <div class="exp-item">
+            Docker <span class="exp-duration">— 2 months</span>
+          </div>
+          <div class="exp-item">
+            Linux <span class="exp-duration">— 2 months</span>
+          </div>
+        </div>
+
+        <!-- PROJECT-BASED PROOF -->
+        <div class="card proof-section card-animate" id="skill-proof">
+          <div class="card-label">Project-Based Skills (Proof)</div>
+          <div class="proof-grid">
+            <div class="proof-item">
+              <span class="proof-emoji"></span>
+              <h5>MERN Stack</h5>
+              <ul>
+                <li>Task Manager app</li>
+                <li>E2E Encrypted chat-app</li>
+                <li>Movie Recommendation System</li>
+              </ul>
+            </div>
+            <div class="proof-item">
+              <span class="proof-emoji"></span>
+              <h5>Java (DSA)</h5>
+              <ul>
+                <li>120+ problems solved</li>
+                <li>200 days DSA challenge active</li>
+              </ul>
+            </div>
+            <div class="proof-item">
+              <span class="proof-emoji"></span>
+              <h5>Docker</h5>
+              <ul>
+                <li>Containerized Node.js apps</li>
+                <li>Dev environment setup</li>
+              </ul>
+            </div>
+            <div class="proof-item">
+              <span class="proof-emoji"></span>
+              <h5>GitHub</h5>
+              <ul>
+                <li>Active commits &amp; repos</li>
+                <li>Collaboration workflows</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEVELOPMENT ACTIVITY -->
+        <div class="card dev-activity-card card-animate" id="skill-dev-activity">
+          <div class="card-label">Development Activity</div>
+          <p class="activity-description">From idea to working solutions :</p>
+          <div class="dev-activity-list">
+            <div class="activity-line">
+              MERN Stack <span class="arrow">→</span> 3 Projects
+              <span class="arrow">→</span><a href="https://github.com/manish-panwarr"><span class="highlight-text"><i
+                    class="fa-brands fa-github"></i> GitHub</span></a>
+            </div>
+            <div class="activity-line">
+              Java DSA <span class="arrow">→</span> 120+ Problems
+              <span class="arrow">→</span>
+              <a href="https://leetcode.com/u/g7pE7qxNks/"><span class="highlight-text"><i
+                    class="fa-brands fa-leetcode"></i>LeetCode</span></a>
+            </div>
+            <div class="activity-line">
+              CyberSecurity <span class="arrow">→</span>Phising Site
+              detection<span class="arrow">→</span>
+              <a href="https://github.com/manish-panwarr"><span class="highlight-text"><i
+                    class="fa-brands fa-github"></i> GitHub</span></a>
+            </div>
+            <div class="activity-line">
+              Docker <span class="arrow">→</span> Containerized Apps
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px">
+            <a href="https://github.com/manish-panwarr" target="_blank" rel="noopener noreferrer"
+              class="github-btn">View My GitHub</a>
+            <div class="github-icon-round">
+              <i class="fa-brands fa-github"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- CURRENTLY LEARNING -->
+        <div class="card learning-card card-animate" id="skill-learning">
+          <div class="card-label">Currently Learning</div>
+          <div class="learning-pills">
+            <span>Kubernetes</span>
+            <span>Basic of AWS</span>
+            <span>System Design</span>
+            <span>Machine Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact mobile" id="contact">
+      <div class="contact-section-wrapper animate-on-scroll">
+        <!-- Left side: Form -->
+        <div class="contact-left-col">
+          <form id="contact-form" class="contact-form-premium">
+            <input type="hidden" name="subject" value="form submission" />
+            <input type="hidden" name="from_name" value="mms.dev" />
+
+            <div class="premium-form-group">
+              <input type="text" name="name" id="name" placeholder=" " required />
+              <label for="name">Your Name</label>
+              <span class="premium-focus-line"></span>
+            </div>
+
+            <div class="premium-form-group">
+              <input type="email" name="email" id="email" placeholder=" " required
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
+              <label for="email">Your Email</label>
+              <span class="premium-focus-line"></span>
+            </div>
+
+            <div class="premium-form-group">
+              <textarea name="message" id="message" rows="4" placeholder=" " required></textarea>
+              <label for="message">Share your thoughts</label>
+              <span class="premium-focus-line"></span>
+            </div>
+
+            <button type="submit" class="cyber-btn-feedback">
+              SHARE YOUR FEEDBACK
+            </button>
+
+            <div id="form-result"></div>
+          </form>
+
+          <!-- Dynamic Submission Stepper (Hidden on start) -->
+          <div id="submission-stepper-container" class="submit-status-container" style="display: none;">
+            <h3 class="status-header" id="stepper-header-title">Submitting your message...</h3>
+
+            <div class="stepper-wrapper">
+              <div class="stepper-line-bg"></div>
+              <div class="stepper-line-fill" id="stepper-fill"></div>
+
+              <div class="stepper-item" id="step-1">
+                <div class="step-dot"><i class="fa-solid fa-check"></i></div>
+                <span class="step-label">Submitted</span>
+              </div>
+
+              <div class="stepper-item" id="step-2">
+                <div class="step-dot"><i class="fa-solid fa-check"></i></div>
+                <span class="step-label">In Progress</span>
+              </div>
+
+              <div class="stepper-item" id="step-3">
+                <div class="step-dot"><i class="fa-solid fa-check"></i></div>
+                <span class="step-label">Sent</span>
+              </div>
+
+              <div class="stepper-item" id="step-4">
+                <div class="step-dot"><i class="fa-solid fa-check"></i></div>
+                <span class="step-label">Auto-Reply</span>
+              </div>
+            </div>
+
+            <!-- Success/Failure Feedback Box -->
+            <div id="stepper-feedback-box" class="stepper-feedback-box" style="display: none;">
+              <div class="success-checkmark-wrapper">
+                <div class="checkmark-circle">
+                  <div class="checkmark-stem"></div>
+                  <div class="checkmark-kick"></div>
+                </div>
+              </div>
+              <p class="feedback-msg" id="stepper-feedback-msg">Your message has been sent successfully!</p>
+              <button type="button" id="btn-send-another" class="btn secondary-btn">Send Another Message</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side: Title & Description -->
+        <div class="contact-right-col">
+          <div class="blob-heading-container">
+            <div class="morphing-blob-shape"></div>
+
+            <h2 class="contact-glitch-title">
+              Contact <br>
+              <span class="line-us">Us</span>
             </h2>
+          </div>
 
-            <div class="certificate-container animate-on-scroll">
+          
 
-                <!-- Main certificate -->
-                <div class="main-view animate-cert-main">
-                    <img src="images/coursera-aws.png" alt="" loading="lazy">
-                </div>
-
-                <!-- Thumbnails -->
-                <div class="certificates-wrapper">
-                    <div class="certificates-small animate-cert-thumbs"></div>
-                </div>
-
+          <div class="premium-contact-details">
+            <a href="mailto:panwarmanish0123@gmail.com" class="premium-detail-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>panwarmanish0123@gmail.com</span>
+            </a>
+            <div class="premium-detail-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 9027811529</span>
             </div>
-        </section>
-
-
-
-        <section class="about mobile" id="about">
-            <h2 class="section-title animate-on-scroll">About <span>Me</span></h2>
-            <div class="about-container">
-                <div class="about-card animate-on-scroll"><i class="fa-solid fa-user-graduate"></i>
-                    <h3>My College</h3>
-                    <div class="college-logos1 MUJ"><a href="https://jaipur.manipal.edu/" target="_blank"><img
-                                src="images/muj.png" alt="MUJ Logo" loading="lazy" /></a></div>
-                    <p>Masters of Computer Application(MCA) || 2025-2027 || MUJ </p>
-                    <div class="college-logos"><a href="https://geu.ac.in/" target="_blank"><img
-                                src="images/geu_logo-removebg-preview.png" alt="GEU Logo" loading="lazy" /></a></div>
-                    <p>Bachelor of Computer Application (BCA) || 2022-2025 || GEU </p>
-                </div>
-                <div class="about-card animate-on-scroll"><i class="fa-solid fa-users"></i>
-                    <h3>My Team & Network</h3>
-                    <p>I believe in collaboration. Connect with me and my network on these platforms.</p>
-                    <div class="team-social"><a href="https://www.facebook.com/"><i
-                                class="fa-brands fa-facebook"></i></a><a
-                            href="https://www.linkedin.com/in/manish-mohan-singh-aab371374/"><i
-                                class="fa-brands fa-linkedin"></i></a><a
-                            href="https://www.instagram.com/manishmpanwar?igsh=MTdzNzJoZmx1MHdvYQ=="><i
-                                class="fa-brands fa-instagram"></i></a><a href="https://github.com/manish-panwarr/"><i
-                                class="fa-brands fa-github"></i></a><a
-                            href="https://youtube.com/@Music_Walle222o?si=3CLiEV8_7dh9eZLh"><i
-                                class="fa-brands fa-youtube"></i></a></div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="skills" id="skills">
-            <h2 class="section-title animate-on-scroll">Technical <span>Progress</span></h2>
-
-            <div class="skills-container">
-
-                <div class="skill-card animate-on-scroll">
-                    <div class="progress" data-value="60" style="--clr:#43f94a">
-                        <h3>0<span>%</span></h3>
-                    </div>
-                    <h4>JAVA</h4>
-                </div>
-
-                <div class="skill-card animate-on-scroll">
-                    <div class="progress" data-value="90" style="--clr:#2ccde9">
-                        <h3>0<span>%</span></h3>
-                    </div>
-                    <h4>JS</h4>
-                </div>
-
-                <div class="skill-card animate-on-scroll">
-                    <div class="progress" data-value="85" style="--clr:#fb297b">
-                        <h3>0<span>%</span></h3>
-                    </div>
-                    <h4>PYTHON</h4>
-                </div>
-
-                <div class="skill-card animate-on-scroll">
-                    <div class="progress" data-value="80" style="--clr:#ffe047">
-                        <h3>0<span>%</span></h3>
-                    </div>
-                    <h4>REACT JS</h4>
-                </div>
-
-                <div class="skill-card animate-on-scroll">
-                    <div class="progress" data-value="80" style="--clr:#ffffff">
-                        <h3>0<span>%</span></h3>
-                    </div>
-                    <h4>MONGODB</h4>
-                </div>
-
-                <div class="skill-card animate-on-scroll">
-                    <div class="progress" data-value="80" style="--clr:#434ff9">
-                        <h3>0<span>%</span></h3>
-                    </div>
-                    <h4>TypeScript</h4>
-                </div>
-
-                <div class="skill-card animate-on-scroll more">
-                    <div class="progress" data-value="90" style="--clr:#43f94a">
-                        <h3>0<span>%</span></h3>
-                    </div>
-                    <h4>HTML</h4>
-                </div>
-
-                <div class="skill-card animate-on-scroll more">
-                    <div class="progress" data-value="90" style="--clr:#2ccde9">
-                        <h3>0<span>%</span></h3>
-                    </div>
-                    <h4>CSS</h4>
-                </div>
-
-                <div class="skill-card animate-on-scroll more">
-                    <div class="progress" data-value="85" style="--clr:#fb297b">
-                        <h3>0<span>%</span></h3>
-                    </div>
-                    <h4>Tailwind</h4>
-                </div>
-
-                <div class="skill-card animate-on-scroll more">
-                    <div class="progress" data-value="86" style="--clr:#ffe047">
-                        <h3>0<span>%</span></h3>
-                    </div>
-                    <h4>SQL</h4>
-                </div>
-
-            </div>
-        </section>
-
-
-
-
-        <section class="contact mobile" id="contact">
-            <h2 class="section-title animate-on-scroll">
-                Contact <span>Us</span>
-            </h2>
-            <p class="contact-subtitle animate-on-scroll">Let's build something amazing together.</p>
-
-            <div class="contact-wrapper animate-on-scroll">
-
-                <!-- Simple Horizontal Phone/Email/Loc details -->
-                <div class="contact-info">
-                    <a href="mailto:panwarmanish0123@gmail.com" class="info-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>panwarmanish0123@gmail.com</span>
-                    </a>
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>+91 9027811***</span>
-                    </div>
-
-
-                </div>
-
-                <!-- Top: Contact Form (70% Width) -->
-                <div class="contact-form-container">
-                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST"
-                        class="contact-form">
-                        <input type="hidden" name="access_key" id="access_key" value="" />
-                        <input type="hidden" name="subject" value="New Submission from Portfolio Website" />
-                        <input type="hidden" name="from_name" value="M_Creation Portfolio" />
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name" placeholder="John Doe" required />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email" placeholder="john@example.com" required
-                                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="5" placeholder="Write your message here..."
-                                required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn submit-btn">
-                            Send Message <i class="fa-solid fa-paper-plane"></i>
-                        </button>
-
-                        <div id="form-result"></div>
-                    </form>
-                </div>
-
-                <!-- Bottom: Description & Map (Merged) -->
-                <div class="contact-bottom-card">
-
-                    <!-- Left: Description -->
-                    <div class="location-description">
-                        <h3><span class="gradient-text">Here We Live. Here We Build.</span></h3>
-                        <p>
-                            We are passionate <span class="highlight">software developers</span> creating modern
-                            websites, mobile apps, and digital solutions that businesses truly need.
-                        </p>
-                        <p>
-                            From social media marketing and video editing to complete digital services — we help ideas
-                            grow into <span class="highlight">real success</span>.
-                        </p>
-                        <div class="location-badges">
-                            <span><i class="fa-solid fa-code"></i> Development</span>
-                            <span><i class="fa-solid fa-rocket"></i> Marketing</span>
-                            <span><i class="fa-solid fa-video"></i> Production</span>
-                            <span><i class="fa-solid fa-landmark"></i>Finance</span>
-                        </div>
-                    </div>
-
-                    <!-- Right: Map -->
-                    <div class="map-wrapper">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3438.4306900871456!2d78.62490932549659!3d30.480559524706877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908ff3125084f7b%3A0x77e41fbcec254be6!2sChamiyala%2C%20Uttarakhand%20249125!5e0!3m2!1sen!2sin!4v1771060261559!5m2!1sen!2sin"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                        <div class="map-overlay">
-                            <span><i class="fa-solid fa-location-dot"></i> Uttarakhand, India</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-
-
-    </main>
-
-
-    <footer class="footer">
-        <div class="footer-social">
-            <a href="https://www.linkedin.com/in/manish-mohan-singh-aab371374/"><i
-                    class="fa-brands fa-linkedin"></i></a><a
-                href="https://www.instagram.com/manishmpanwar?igsh=MTdzNzJoZmx1MHdvYQ=="><i
-                    class="fa-brands fa-instagram"></i></a><a href="https://github.com/manish-panwarr/"><i
-                    class="fa-brands fa-github"></i></a><a
-                href="https://youtube.com/@Music_Walle222o?si=3CLiEV8_7dh9eZLh"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
-        <div class="footer-text">
-            <p>Made with ♥ by M_Creation <br />© 2023-2026, M_creation.com, Inc. or its affiliates</p>
-        </div>
-        <div class="footer-icon-top">
-            <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
-        </div>
-    </footer>
+      </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="config.js"></script>
-    <script src="script.js" defer></script>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/manish-mohan-singh-aab371374/" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-linkedin"></i></a><a
+        href="https://www.instagram.com/manishmpanwar?igsh=MTdzNzJoZmx1MHdvYQ==" target="_blank"
+        rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a><a href="https://github.com/manish-panwarr/"
+        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+    </div>
+    <div class="footer-text">
+      <p>Made with ♥ by mms.dev <br /></p>
+    </div>
+    <div class="footer-icon-top">
+      <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script defer src="assets/js/script.js"></script>
+  <script defer src="assets/js/dashboard.js"></script>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+
+  <!-- Premium Interactive UI Layer Modules -->
+  <script defer src="assets/js/interactive-background.js"></script>
+  <script defer src="assets/js/custom-cursor.js"></script>
+  <script defer src="assets/js/magnetic-buttons.js"></script>
+  <script defer src="assets/js/animations.js"></script>
 </body>
 
 </html>
